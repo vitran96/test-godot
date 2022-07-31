@@ -11,10 +11,10 @@ extents = Vector2( 30, 30 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 33, 33 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8, 135 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10.75, 131.5 )
 
 [node name="Main" type="Node2D"]
@@ -38,10 +38,11 @@ shape = SubResource( 2 )
 
 [node name="Area2D2" type="Area2D" parent="Player2"]
 position = Vector2( -384, -105 )
+monitorable = false
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/Area2D2"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Player2/Area2D2"]
 scale = Vector2( 0.240001, 4.12 )
@@ -49,16 +50,17 @@ texture = ExtResource( 3 )
 
 [node name="Resetter" type="Area2D" parent="Player2"]
 position = Vector2( -193.379, -113.74 )
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/Resetter"]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Area2D3" type="Area2D" parent="."]
 position = Vector2( -424, -104 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Area2D3"]
 scale = Vector2( 0.240001, 4.12 )
